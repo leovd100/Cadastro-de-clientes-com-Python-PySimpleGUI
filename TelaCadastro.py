@@ -134,15 +134,21 @@ class Tela_Cadastro:
                             'CEP': self.values['cep'],
                             'Bairro': self.values['bairro'],
                             'Rua': self.values['rua'],
-                            'Nº': self.values['number']
+                            'N': self.values['number']
                         }
                         arquivo = open('Cadastro.txt','a')
 
-                        arquivo.write('\n[')
+                        arquivo.write('[')
                         for key, vl_sv in salvar.items():
-                            arquivo.write('{')
-                            arquivo.write('{0}:{1}'.format(key,salvar[key]))
-                            arquivo.write('}],')
+                            if key != 'N:':
+                                arquivo.write('{')
+                                arquivo.write('{0}:"{1}"'.format(key,salvar[key]))
+                                arquivo.write('},')
+                            else:
+                                arquivo.write('{')
+                                arquivo.write('{0}:"{1}"'.format(key, salvar[key]))
+                        arquivo.write('}]')
+                        arquivo.write('\n')
                         arquivo.close()
                     except:
                         pass

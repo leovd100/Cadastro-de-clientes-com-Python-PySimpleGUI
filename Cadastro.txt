@@ -1,0 +1,1 @@
+[{Nome:Leonardo Vieira Demetrio},{Idade:22},{CPF:46210910858},{Telefone:46446911},{E-mail:demetrio.vd@hotmail.com},{CEP:08594030},{Bairro:Parque Residencial Marengo},{Rua:Rua Te�filo Dias},{N:60}]
